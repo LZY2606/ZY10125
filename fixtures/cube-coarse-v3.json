@@ -1,0 +1,337 @@
+{
+  "schema": "fem-json/1",
+  "id": "cube-coarse-v3",
+  "name": "Cube coarse v3 (merge target)",
+  "nodes": [
+    {
+      "id": "cn0",
+      "coord": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "cn1",
+      "coord": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "cn2",
+      "coord": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "cn3",
+      "coord": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "cn4",
+      "coord": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "cn5",
+      "coord": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "cn6",
+      "coord": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "cn7",
+      "coord": [
+        0,
+        1,
+        1
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "id": "ce0",
+      "nodes": [
+        "cn0",
+        "cn1",
+        "cn2",
+        "cn5"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "ce1",
+      "nodes": [
+        "cn0",
+        "cn2",
+        "cn3",
+        "cn7"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "ce2",
+      "nodes": [
+        "cn0",
+        "cn4",
+        "cn5",
+        "cn7"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "ce3",
+      "nodes": [
+        "cn2",
+        "cn5",
+        "cn6",
+        "cn7"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "ce4",
+      "nodes": [
+        "cn2",
+        "cn0",
+        "cn5",
+        "cn7"
+      ],
+      "zone": "solid"
+    }
+  ],
+  "faces": [
+    {
+      "id": "cf1",
+      "nodes": [
+        "cn1",
+        "cn0",
+        "cn2"
+      ],
+      "region": "bottom"
+    },
+    {
+      "id": "cf2",
+      "nodes": [
+        "cn0",
+        "cn1",
+        "cn5"
+      ],
+      "region": "front"
+    },
+    {
+      "id": "cf3",
+      "nodes": [
+        "cn2",
+        "cn0",
+        "cn3"
+      ],
+      "region": "bottom"
+    },
+    {
+      "id": "cf4",
+      "nodes": [
+        "cn3",
+        "cn0",
+        "cn7"
+      ],
+      "region": "left"
+    },
+    {
+      "id": "cf5",
+      "nodes": [
+        "cn4",
+        "cn0",
+        "cn5"
+      ],
+      "region": "front"
+    },
+    {
+      "id": "cf6",
+      "nodes": [
+        "cn0",
+        "cn4",
+        "cn7"
+      ],
+      "region": "left"
+    },
+    {
+      "id": "cf7",
+      "nodes": [
+        "cn1",
+        "cn2",
+        "cn5"
+      ],
+      "region": "right"
+    },
+    {
+      "id": "cf8",
+      "nodes": [
+        "cn2",
+        "cn3",
+        "cn7"
+      ],
+      "region": "back"
+    },
+    {
+      "id": "cf9",
+      "nodes": [
+        "cn5",
+        "cn2",
+        "cn6"
+      ],
+      "region": "right"
+    },
+    {
+      "id": "cf10",
+      "nodes": [
+        "cn6",
+        "cn2",
+        "cn7"
+      ],
+      "region": "back"
+    },
+    {
+      "id": "cf11",
+      "nodes": [
+        "cn4",
+        "cn5",
+        "cn7"
+      ],
+      "region": "top"
+    },
+    {
+      "id": "cf12",
+      "nodes": [
+        "cn5",
+        "cn6",
+        "cn7"
+      ],
+      "region": "top"
+    }
+  ],
+  "zones": [
+    {
+      "id": "solid",
+      "name": "bulk material",
+      "material": {
+        "E": 210000,
+        "nu": 0.3,
+        "rho": 7.85e-9
+      }
+    }
+  ],
+  "loads": [
+    {
+      "id": "load-top-pressure",
+      "kind": "facePressure",
+      "faces": [
+        "cn4,cn5,cn7",
+        "cn5,cn6,cn7"
+      ],
+      "pressure": 100
+    },
+    {
+      "id": "load-corner-force",
+      "kind": "nodalForce",
+      "node": "cn7",
+      "vector": [
+        10,
+        -5,
+        20
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "id": "fix-corner-0",
+      "node": "cn0",
+      "fixed": [
+        "ux",
+        "uy",
+        "uz"
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "id": "probe-corner",
+      "label": "measured corner 7",
+      "coord": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "boundaryRegions": [
+    {
+      "id": "back",
+      "name": "back",
+      "members": [
+        "cn2,cn3,cn7",
+        "cn2,cn6,cn7"
+      ]
+    },
+    {
+      "id": "bottom",
+      "name": "bottom",
+      "members": [
+        "cn0,cn1,cn2",
+        "cn0,cn2,cn3"
+      ]
+    },
+    {
+      "id": "front",
+      "name": "front",
+      "members": [
+        "cn0,cn1,cn5",
+        "cn0,cn4,cn5"
+      ]
+    },
+    {
+      "id": "left",
+      "name": "left",
+      "members": [
+        "cn0,cn3,cn7",
+        "cn0,cn4,cn7"
+      ]
+    },
+    {
+      "id": "right",
+      "name": "right",
+      "members": [
+        "cn1,cn2,cn5",
+        "cn2,cn5,cn6"
+      ]
+    },
+    {
+      "id": "top",
+      "name": "top",
+      "members": [
+        "cn4,cn5,cn7",
+        "cn5,cn6,cn7"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "schema": "fem-json/1",
+  "id": "cube-coarse-v1",
+  "name": "Cube coarse (5 tets) v1",
+  "nodes": [
+    {
+      "id": "nn0",
+      "coord": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "nn1",
+      "coord": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "nn2",
+      "coord": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "nn3",
+      "coord": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "nn4",
+      "coord": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "nn5",
+      "coord": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "nn6",
+      "coord": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "nn7",
+      "coord": [
+        0,
+        1,
+        1
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "id": "ne0",
+      "nodes": [
+        "nn0",
+        "nn1",
+        "nn2",
+        "nn5"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "ne1",
+      "nodes": [
+        "nn0",
+        "nn2",
+        "nn3",
+        "nn7"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "ne2",
+      "nodes": [
+        "nn0",
+        "nn4",
+        "nn5",
+        "nn7"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "ne3",
+      "nodes": [
+        "nn2",
+        "nn5",
+        "nn6",
+        "nn7"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "ne4",
+      "nodes": [
+        "nn2",
+        "nn0",
+        "nn5",
+        "nn7"
+      ],
+      "zone": "solid"
+    }
+  ],
+  "faces": [
+    {
+      "id": "nf1",
+      "nodes": [
+        "nn1",
+        "nn0",
+        "nn2"
+      ],
+      "region": "bottom"
+    },
+    {
+      "id": "nf2",
+      "nodes": [
+        "nn0",
+        "nn1",
+        "nn5"
+      ],
+      "region": "front"
+    },
+    {
+      "id": "nf3",
+      "nodes": [
+        "nn2",
+        "nn0",
+        "nn3"
+      ],
+      "region": "bottom"
+    },
+    {
+      "id": "nf4",
+      "nodes": [
+        "nn3",
+        "nn0",
+        "nn7"
+      ],
+      "region": "left"
+    },
+    {
+      "id": "nf5",
+      "nodes": [
+        "nn4",
+        "nn0",
+        "nn5"
+      ],
+      "region": "front"
+    },
+    {
+      "id": "nf6",
+      "nodes": [
+        "nn0",
+        "nn4",
+        "nn7"
+      ],
+      "region": "left"
+    },
+    {
+      "id": "nf7",
+      "nodes": [
+        "nn1",
+        "nn2",
+        "nn5"
+      ],
+      "region": "right"
+    },
+    {
+      "id": "nf8",
+      "nodes": [
+        "nn2",
+        "nn3",
+        "nn7"
+      ],
+      "region": "back"
+    },
+    {
+      "id": "nf9",
+      "nodes": [
+        "nn5",
+        "nn2",
+        "nn6"
+      ],
+      "region": "right"
+    },
+    {
+      "id": "nf10",
+      "nodes": [
+        "nn6",
+        "nn2",
+        "nn7"
+      ],
+      "region": "back"
+    },
+    {
+      "id": "nf11",
+      "nodes": [
+        "nn4",
+        "nn5",
+        "nn7"
+      ],
+      "region": "top"
+    },
+    {
+      "id": "nf12",
+      "nodes": [
+        "nn5",
+        "nn6",
+        "nn7"
+      ],
+      "region": "top"
+    }
+  ],
+  "zones": [
+    {
+      "id": "solid",
+      "name": "bulk material",
+      "material": {
+        "E": 210000,
+        "nu": 0.3,
+        "rho": 7.85e-9
+      }
+    }
+  ],
+  "loads": [
+    {
+      "id": "load-top-pressure",
+      "kind": "facePressure",
+      "faces": [
+        "nn4,nn5,nn7",
+        "nn5,nn6,nn7"
+      ],
+      "pressure": 100
+    },
+    {
+      "id": "load-right-pressure",
+      "kind": "facePressure",
+      "faces": [
+        "nn1,nn2,nn5",
+        "nn2,nn5,nn6"
+      ],
+      "pressure": 42
+    },
+    {
+      "id": "load-corner-force",
+      "kind": "nodalForce",
+      "node": "nn7",
+      "vector": [
+        10,
+        -5,
+        20
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "id": "fix-corner-0",
+      "node": "nn0",
+      "fixed": [
+        "ux",
+        "uy",
+        "uz"
+      ]
+    },
+    {
+      "id": "fix-edge-1",
+      "node": "nn1",
+      "fixed": [
+        "uy",
+        "uz"
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "id": "probe-corner",
+      "label": "measured corner 7",
+      "coord": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "probe-center",
+      "label": "cube center",
+      "coord": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "boundaryRegions": [
+    {
+      "id": "back",
+      "name": "back",
+      "members": [
+        "nn2,nn3,nn7",
+        "nn2,nn6,nn7"
+      ]
+    },
+    {
+      "id": "bottom",
+      "name": "bottom",
+      "members": [
+        "nn0,nn1,nn2",
+        "nn0,nn2,nn3"
+      ]
+    },
+    {
+      "id": "front",
+      "name": "front",
+      "members": [
+        "nn0,nn1,nn5",
+        "nn0,nn4,nn5"
+      ]
+    },
+    {
+      "id": "left",
+      "name": "left",
+      "members": [
+        "nn0,nn3,nn7",
+        "nn0,nn4,nn7"
+      ]
+    },
+    {
+      "id": "right",
+      "name": "right",
+      "members": [
+        "nn1,nn2,nn5",
+        "nn2,nn5,nn6"
+      ]
+    },
+    {
+      "id": "top",
+      "name": "top",
+      "members": [
+        "nn4,nn5,nn7",
+        "nn5,nn6,nn7"
+      ]
+    }
+  ]
+}

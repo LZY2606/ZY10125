@@ -1,0 +1,334 @@
+{
+  "schema": "fem-json/1",
+  "id": "cube-broken-v4",
+  "name": "Cube with inverted and degenerate tets v4",
+  "nodes": [
+    {
+      "id": "bn0",
+      "coord": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bn1",
+      "coord": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bn2",
+      "coord": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "bn3",
+      "coord": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "bn4",
+      "coord": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "bn5",
+      "coord": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "bn6",
+      "coord": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "bn7",
+      "coord": [
+        0,
+        1,
+        1
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "id": "be0",
+      "nodes": [
+        "bn1",
+        "bn0",
+        "bn2",
+        "bn5"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "be1",
+      "nodes": [
+        "bn0",
+        "bn2",
+        "bn3",
+        "bn7"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "be2",
+      "nodes": [
+        "bn0",
+        "bn4",
+        "bn5",
+        "bn7"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "be3",
+      "nodes": [
+        "bn2",
+        "bn5",
+        "bn6",
+        "bn7"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "be4",
+      "nodes": [
+        "bn2",
+        "bn0",
+        "bn5",
+        "bn7"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "be-degenerate",
+      "nodes": [
+        "bn0",
+        "bn1",
+        "bn2",
+        "bn3"
+      ],
+      "zone": "solid"
+    }
+  ],
+  "faces": [
+    {
+      "id": "bf1",
+      "nodes": [
+        "bn1",
+        "bn0",
+        "bn2"
+      ],
+      "region": "bottom"
+    },
+    {
+      "id": "bf2",
+      "nodes": [
+        "bn0",
+        "bn1",
+        "bn5"
+      ],
+      "region": "front"
+    },
+    {
+      "id": "bf3",
+      "nodes": [
+        "bn2",
+        "bn0",
+        "bn3"
+      ],
+      "region": "bottom"
+    },
+    {
+      "id": "bf4",
+      "nodes": [
+        "bn3",
+        "bn0",
+        "bn7"
+      ],
+      "region": "left"
+    },
+    {
+      "id": "bf5",
+      "nodes": [
+        "bn4",
+        "bn0",
+        "bn5"
+      ],
+      "region": "front"
+    },
+    {
+      "id": "bf6",
+      "nodes": [
+        "bn0",
+        "bn4",
+        "bn7"
+      ],
+      "region": "left"
+    },
+    {
+      "id": "bf7",
+      "nodes": [
+        "bn1",
+        "bn2",
+        "bn5"
+      ],
+      "region": "right"
+    },
+    {
+      "id": "bf8",
+      "nodes": [
+        "bn2",
+        "bn3",
+        "bn7"
+      ],
+      "region": "back"
+    },
+    {
+      "id": "bf9",
+      "nodes": [
+        "bn5",
+        "bn2",
+        "bn6"
+      ],
+      "region": "right"
+    },
+    {
+      "id": "bf10",
+      "nodes": [
+        "bn6",
+        "bn2",
+        "bn7"
+      ],
+      "region": "back"
+    },
+    {
+      "id": "bf11",
+      "nodes": [
+        "bn4",
+        "bn5",
+        "bn7"
+      ],
+      "region": "top"
+    },
+    {
+      "id": "bf12",
+      "nodes": [
+        "bn5",
+        "bn6",
+        "bn7"
+      ],
+      "region": "top"
+    }
+  ],
+  "zones": [
+    {
+      "id": "solid",
+      "name": "solid",
+      "material": {
+        "E": 210000,
+        "nu": 0.3
+      }
+    }
+  ],
+  "loads": [
+    {
+      "id": "load-dangling",
+      "kind": "nodalForce",
+      "node": "nope-99",
+      "vector": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "id": "fix-b0",
+      "node": "bn0",
+      "fixed": [
+        "ux",
+        "uy",
+        "uz"
+      ]
+    },
+    {
+      "id": "fix-b0-again",
+      "node": "bn0",
+      "fixed": [
+        "ux"
+      ]
+    }
+  ],
+  "probes": [],
+  "boundaryRegions": [
+    {
+      "id": "back",
+      "name": "back",
+      "members": [
+        "bn2,bn3,bn7",
+        "bn2,bn6,bn7"
+      ]
+    },
+    {
+      "id": "bottom",
+      "name": "bottom",
+      "members": [
+        "bn0,bn1,bn2",
+        "bn0,bn2,bn3"
+      ]
+    },
+    {
+      "id": "front",
+      "name": "front",
+      "members": [
+        "bn0,bn1,bn5",
+        "bn0,bn4,bn5"
+      ]
+    },
+    {
+      "id": "left",
+      "name": "left",
+      "members": [
+        "bn0,bn3,bn7",
+        "bn0,bn4,bn7"
+      ]
+    },
+    {
+      "id": "right",
+      "name": "right",
+      "members": [
+        "bn1,bn2,bn5",
+        "bn2,bn5,bn6"
+      ]
+    },
+    {
+      "id": "top",
+      "name": "top",
+      "members": [
+        "bn4,bn5,bn7",
+        "bn5,bn6,bn7"
+      ]
+    }
+  ]
+}

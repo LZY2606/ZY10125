@@ -1,0 +1,1236 @@
+{
+  "schema": "fem-json/1",
+  "id": "cube-refined-v2",
+  "name": "Cube refined (40 tets) v2",
+  "nodes": [
+    {
+      "id": "rnn0",
+      "coord": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "rnn1",
+      "coord": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "rnn2",
+      "coord": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "rnn3",
+      "coord": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "rnn4",
+      "coord": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "rnn5",
+      "coord": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "rnn6",
+      "coord": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "rnn7",
+      "coord": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "rm0",
+      "coord": [
+        0.5,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "rm1",
+      "coord": [
+        0.5,
+        0.5,
+        0
+      ]
+    },
+    {
+      "id": "rm2",
+      "coord": [
+        0.5,
+        0,
+        0.5
+      ]
+    },
+    {
+      "id": "rm3",
+      "coord": [
+        1,
+        0.5,
+        0
+      ]
+    },
+    {
+      "id": "rm4",
+      "coord": [
+        1,
+        0,
+        0.5
+      ]
+    },
+    {
+      "id": "rm5",
+      "coord": [
+        1,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "rm6",
+      "coord": [
+        0,
+        0.5,
+        0
+      ]
+    },
+    {
+      "id": "rm7",
+      "coord": [
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "rm8",
+      "coord": [
+        0.5,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "rm9",
+      "coord": [
+        0.5,
+        1,
+        0.5
+      ]
+    },
+    {
+      "id": "rm10",
+      "coord": [
+        0,
+        1,
+        0.5
+      ]
+    },
+    {
+      "id": "rm11",
+      "coord": [
+        0,
+        0,
+        0.5
+      ]
+    },
+    {
+      "id": "rm12",
+      "coord": [
+        0.5,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "rm13",
+      "coord": [
+        0,
+        0.5,
+        1
+      ]
+    },
+    {
+      "id": "rm14",
+      "coord": [
+        0.5,
+        0.5,
+        1
+      ]
+    },
+    {
+      "id": "rm15",
+      "coord": [
+        1,
+        1,
+        0.5
+      ]
+    },
+    {
+      "id": "rm16",
+      "coord": [
+        1,
+        0.5,
+        1
+      ]
+    },
+    {
+      "id": "rm17",
+      "coord": [
+        0.5,
+        1,
+        1
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "id": "re0",
+      "nodes": [
+        "rnn0",
+        "rm0",
+        "rm1",
+        "rm2"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re1",
+      "nodes": [
+        "rnn1",
+        "rm3",
+        "rm0",
+        "rm4"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re2",
+      "nodes": [
+        "rnn2",
+        "rm1",
+        "rm3",
+        "rm5"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re3",
+      "nodes": [
+        "rm2",
+        "rnn5",
+        "rm4",
+        "rm5"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re4",
+      "nodes": [
+        "rm0",
+        "rm1",
+        "rm2",
+        "rm5"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re5",
+      "nodes": [
+        "rm1",
+        "rm0",
+        "rm3",
+        "rm5"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re6",
+      "nodes": [
+        "rm0",
+        "rm2",
+        "rm4",
+        "rm5"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re7",
+      "nodes": [
+        "rm3",
+        "rm0",
+        "rm4",
+        "rm5"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re8",
+      "nodes": [
+        "rnn0",
+        "rm1",
+        "rm6",
+        "rm7"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re9",
+      "nodes": [
+        "rnn2",
+        "rm8",
+        "rm1",
+        "rm9"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re10",
+      "nodes": [
+        "rnn3",
+        "rm6",
+        "rm8",
+        "rm10"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re11",
+      "nodes": [
+        "rm7",
+        "rnn7",
+        "rm9",
+        "rm10"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re12",
+      "nodes": [
+        "rm1",
+        "rm6",
+        "rm7",
+        "rm10"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re13",
+      "nodes": [
+        "rm6",
+        "rm1",
+        "rm8",
+        "rm10"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re14",
+      "nodes": [
+        "rm1",
+        "rm7",
+        "rm9",
+        "rm10"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re15",
+      "nodes": [
+        "rm8",
+        "rm1",
+        "rm9",
+        "rm10"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re16",
+      "nodes": [
+        "rnn0",
+        "rm11",
+        "rm2",
+        "rm7"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re17",
+      "nodes": [
+        "rnn4",
+        "rm12",
+        "rm11",
+        "rm13"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re18",
+      "nodes": [
+        "rnn5",
+        "rm2",
+        "rm12",
+        "rm14"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re19",
+      "nodes": [
+        "rm7",
+        "rnn7",
+        "rm13",
+        "rm14"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re20",
+      "nodes": [
+        "rm11",
+        "rm2",
+        "rm7",
+        "rm14"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re21",
+      "nodes": [
+        "rm2",
+        "rm11",
+        "rm12",
+        "rm14"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re22",
+      "nodes": [
+        "rm11",
+        "rm7",
+        "rm13",
+        "rm14"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re23",
+      "nodes": [
+        "rm12",
+        "rm11",
+        "rm13",
+        "rm14"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re24",
+      "nodes": [
+        "rnn2",
+        "rm5",
+        "rm15",
+        "rm9"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re25",
+      "nodes": [
+        "rnn5",
+        "rm16",
+        "rm5",
+        "rm14"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re26",
+      "nodes": [
+        "rnn6",
+        "rm15",
+        "rm16",
+        "rm17"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re27",
+      "nodes": [
+        "rm9",
+        "rnn7",
+        "rm14",
+        "rm17"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re28",
+      "nodes": [
+        "rm5",
+        "rm15",
+        "rm9",
+        "rm17"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re29",
+      "nodes": [
+        "rm15",
+        "rm5",
+        "rm16",
+        "rm17"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re30",
+      "nodes": [
+        "rm5",
+        "rm9",
+        "rm14",
+        "rm17"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re31",
+      "nodes": [
+        "rm16",
+        "rm5",
+        "rm14",
+        "rm17"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re32",
+      "nodes": [
+        "rnn2",
+        "rm1",
+        "rm5",
+        "rm9"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re33",
+      "nodes": [
+        "rnn0",
+        "rm2",
+        "rm1",
+        "rm7"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re34",
+      "nodes": [
+        "rnn5",
+        "rm5",
+        "rm2",
+        "rm14"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re35",
+      "nodes": [
+        "rm9",
+        "rnn7",
+        "rm7",
+        "rm14"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re36",
+      "nodes": [
+        "rm1",
+        "rm5",
+        "rm9",
+        "rm14"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re37",
+      "nodes": [
+        "rm5",
+        "rm1",
+        "rm2",
+        "rm14"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re38",
+      "nodes": [
+        "rm1",
+        "rm9",
+        "rm7",
+        "rm14"
+      ],
+      "zone": "solid"
+    },
+    {
+      "id": "re39",
+      "nodes": [
+        "rm2",
+        "rm1",
+        "rm7",
+        "rm14"
+      ],
+      "zone": "solid"
+    }
+  ],
+  "faces": [
+    {
+      "id": "rf0",
+      "nodes": [
+        "rnn1",
+        "rm0",
+        "rm3"
+      ],
+      "region": "bottom"
+    },
+    {
+      "id": "rf1",
+      "nodes": [
+        "rm0",
+        "rnn0",
+        "rm1"
+      ],
+      "region": "bottom"
+    },
+    {
+      "id": "rf2",
+      "nodes": [
+        "rm3",
+        "rm1",
+        "rnn2"
+      ],
+      "region": "bottom"
+    },
+    {
+      "id": "rf3",
+      "nodes": [
+        "rm0",
+        "rm1",
+        "rm3"
+      ],
+      "region": "bottom"
+    },
+    {
+      "id": "rf4",
+      "nodes": [
+        "rnn0",
+        "rm0",
+        "rm2"
+      ],
+      "region": "front"
+    },
+    {
+      "id": "rf5",
+      "nodes": [
+        "rm0",
+        "rnn1",
+        "rm4"
+      ],
+      "region": "front"
+    },
+    {
+      "id": "rf6",
+      "nodes": [
+        "rm2",
+        "rm4",
+        "rnn5"
+      ],
+      "region": "front"
+    },
+    {
+      "id": "rf7",
+      "nodes": [
+        "rm0",
+        "rm4",
+        "rm2"
+      ],
+      "region": "front"
+    },
+    {
+      "id": "rf8",
+      "nodes": [
+        "rnn2",
+        "rm1",
+        "rm8"
+      ],
+      "region": "bottom"
+    },
+    {
+      "id": "rf9",
+      "nodes": [
+        "rm1",
+        "rnn0",
+        "rm6"
+      ],
+      "region": "bottom"
+    },
+    {
+      "id": "rf10",
+      "nodes": [
+        "rm8",
+        "rm6",
+        "rnn3"
+      ],
+      "region": "bottom"
+    },
+    {
+      "id": "rf11",
+      "nodes": [
+        "rm1",
+        "rm6",
+        "rm8"
+      ],
+      "region": "bottom"
+    },
+    {
+      "id": "rf12",
+      "nodes": [
+        "rnn3",
+        "rm6",
+        "rm10"
+      ],
+      "region": "left"
+    },
+    {
+      "id": "rf13",
+      "nodes": [
+        "rm6",
+        "rnn0",
+        "rm7"
+      ],
+      "region": "left"
+    },
+    {
+      "id": "rf14",
+      "nodes": [
+        "rm10",
+        "rm7",
+        "rnn7"
+      ],
+      "region": "left"
+    },
+    {
+      "id": "rf15",
+      "nodes": [
+        "rm6",
+        "rm7",
+        "rm10"
+      ],
+      "region": "left"
+    },
+    {
+      "id": "rf16",
+      "nodes": [
+        "rnn4",
+        "rm11",
+        "rm12"
+      ],
+      "region": "front"
+    },
+    {
+      "id": "rf17",
+      "nodes": [
+        "rm11",
+        "rnn0",
+        "rm2"
+      ],
+      "region": "front"
+    },
+    {
+      "id": "rf18",
+      "nodes": [
+        "rm12",
+        "rm2",
+        "rnn5"
+      ],
+      "region": "front"
+    },
+    {
+      "id": "rf19",
+      "nodes": [
+        "rm11",
+        "rm2",
+        "rm12"
+      ],
+      "region": "front"
+    },
+    {
+      "id": "rf20",
+      "nodes": [
+        "rnn0",
+        "rm11",
+        "rm7"
+      ],
+      "region": "left"
+    },
+    {
+      "id": "rf21",
+      "nodes": [
+        "rm11",
+        "rnn4",
+        "rm13"
+      ],
+      "region": "left"
+    },
+    {
+      "id": "rf22",
+      "nodes": [
+        "rm7",
+        "rm13",
+        "rnn7"
+      ],
+      "region": "left"
+    },
+    {
+      "id": "rf23",
+      "nodes": [
+        "rm11",
+        "rm13",
+        "rm7"
+      ],
+      "region": "left"
+    },
+    {
+      "id": "rf24",
+      "nodes": [
+        "rnn1",
+        "rm3",
+        "rm4"
+      ],
+      "region": "right"
+    },
+    {
+      "id": "rf25",
+      "nodes": [
+        "rm3",
+        "rnn2",
+        "rm5"
+      ],
+      "region": "right"
+    },
+    {
+      "id": "rf26",
+      "nodes": [
+        "rm4",
+        "rm5",
+        "rnn5"
+      ],
+      "region": "right"
+    },
+    {
+      "id": "rf27",
+      "nodes": [
+        "rm3",
+        "rm5",
+        "rm4"
+      ],
+      "region": "right"
+    },
+    {
+      "id": "rf28",
+      "nodes": [
+        "rnn2",
+        "rm8",
+        "rm9"
+      ],
+      "region": "back"
+    },
+    {
+      "id": "rf29",
+      "nodes": [
+        "rm8",
+        "rnn3",
+        "rm10"
+      ],
+      "region": "back"
+    },
+    {
+      "id": "rf30",
+      "nodes": [
+        "rm9",
+        "rm10",
+        "rnn7"
+      ],
+      "region": "back"
+    },
+    {
+      "id": "rf31",
+      "nodes": [
+        "rm8",
+        "rm10",
+        "rm9"
+      ],
+      "region": "back"
+    },
+    {
+      "id": "rf32",
+      "nodes": [
+        "rnn5",
+        "rm5",
+        "rm16"
+      ],
+      "region": "right"
+    },
+    {
+      "id": "rf33",
+      "nodes": [
+        "rm5",
+        "rnn2",
+        "rm15"
+      ],
+      "region": "right"
+    },
+    {
+      "id": "rf34",
+      "nodes": [
+        "rm16",
+        "rm15",
+        "rnn6"
+      ],
+      "region": "right"
+    },
+    {
+      "id": "rf35",
+      "nodes": [
+        "rm5",
+        "rm15",
+        "rm16"
+      ],
+      "region": "right"
+    },
+    {
+      "id": "rf36",
+      "nodes": [
+        "rnn6",
+        "rm15",
+        "rm17"
+      ],
+      "region": "back"
+    },
+    {
+      "id": "rf37",
+      "nodes": [
+        "rm15",
+        "rnn2",
+        "rm9"
+      ],
+      "region": "back"
+    },
+    {
+      "id": "rf38",
+      "nodes": [
+        "rm17",
+        "rm9",
+        "rnn7"
+      ],
+      "region": "back"
+    },
+    {
+      "id": "rf39",
+      "nodes": [
+        "rm15",
+        "rm9",
+        "rm17"
+      ],
+      "region": "back"
+    },
+    {
+      "id": "rf40",
+      "nodes": [
+        "rnn4",
+        "rm12",
+        "rm13"
+      ],
+      "region": "top"
+    },
+    {
+      "id": "rf41",
+      "nodes": [
+        "rm12",
+        "rnn5",
+        "rm14"
+      ],
+      "region": "top"
+    },
+    {
+      "id": "rf42",
+      "nodes": [
+        "rm13",
+        "rm14",
+        "rnn7"
+      ],
+      "region": "top"
+    },
+    {
+      "id": "rf43",
+      "nodes": [
+        "rm12",
+        "rm14",
+        "rm13"
+      ],
+      "region": "top"
+    },
+    {
+      "id": "rf44",
+      "nodes": [
+        "rnn5",
+        "rm16",
+        "rm14"
+      ],
+      "region": "top"
+    },
+    {
+      "id": "rf45",
+      "nodes": [
+        "rm16",
+        "rnn6",
+        "rm17"
+      ],
+      "region": "top"
+    },
+    {
+      "id": "rf46",
+      "nodes": [
+        "rm14",
+        "rm17",
+        "rnn7"
+      ],
+      "region": "top"
+    },
+    {
+      "id": "rf47",
+      "nodes": [
+        "rm16",
+        "rm17",
+        "rm14"
+      ],
+      "region": "top"
+    }
+  ],
+  "zones": [
+    {
+      "id": "solid",
+      "name": "bulk material",
+      "material": {
+        "E": 210000,
+        "nu": 0.3,
+        "rho": 7.85e-9
+      }
+    }
+  ],
+  "loads": [
+    {
+      "id": "load-top-pressure",
+      "kind": "facePressure",
+      "faces": [
+        "rm12,rm13,rm14",
+        "rm12,rm13,rnn4",
+        "rm12,rm14,rnn5",
+        "rm13,rm14,rnn7",
+        "rm14,rm16,rm17",
+        "rm14,rm16,rnn5",
+        "rm14,rm17,rnn7",
+        "rm16,rm17,rnn6"
+      ],
+      "pressure": 100
+    },
+    {
+      "id": "load-right-pressure",
+      "kind": "facePressure",
+      "faces": [
+        "rm15,rm16,rm5",
+        "rm15,rm16,rnn6",
+        "rm15,rm5,rnn2",
+        "rm16,rm5,rnn5",
+        "rm3,rm4,rm5",
+        "rm3,rm4,rnn1",
+        "rm3,rm5,rnn2",
+        "rm4,rm5,rnn5"
+      ],
+      "pressure": 42
+    },
+    {
+      "id": "load-corner-force",
+      "kind": "nodalForce",
+      "node": "rnn7",
+      "vector": [
+        10,
+        -5,
+        20
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "id": "fix-corner-0",
+      "node": "rnn0",
+      "fixed": [
+        "ux",
+        "uy",
+        "uz"
+      ]
+    },
+    {
+      "id": "fix-edge-1",
+      "node": "rnn1",
+      "fixed": [
+        "uy",
+        "uz"
+      ]
+    },
+    {
+      "id": "fix-refined-midpoint",
+      "node": "rm1",
+      "fixed": [
+        "uz"
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "id": "probe-corner",
+      "label": "measured corner 7",
+      "coord": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "probe-center",
+      "label": "cube center on new node",
+      "coord": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "boundaryRegions": [
+    {
+      "id": "back",
+      "name": "back",
+      "members": [
+        "rm10,rm8,rm9",
+        "rm10,rm8,rnn3",
+        "rm10,rm9,rnn7",
+        "rm15,rm17,rm9",
+        "rm15,rm17,rnn6",
+        "rm15,rm9,rnn2",
+        "rm17,rm9,rnn7",
+        "rm8,rm9,rnn2"
+      ]
+    },
+    {
+      "id": "bottom",
+      "name": "bottom",
+      "members": [
+        "rm0,rm1,rm3",
+        "rm0,rm1,rnn0",
+        "rm0,rm3,rnn1",
+        "rm1,rm3,rnn2",
+        "rm1,rm6,rm8",
+        "rm1,rm6,rnn0",
+        "rm1,rm8,rnn2",
+        "rm6,rm8,rnn3"
+      ]
+    },
+    {
+      "id": "front",
+      "name": "front",
+      "members": [
+        "rm0,rm2,rm4",
+        "rm0,rm2,rnn0",
+        "rm0,rm4,rnn1",
+        "rm11,rm12,rm2",
+        "rm11,rm12,rnn4",
+        "rm11,rm2,rnn0",
+        "rm12,rm2,rnn5",
+        "rm2,rm4,rnn5"
+      ]
+    },
+    {
+      "id": "left",
+      "name": "left",
+      "members": [
+        "rm10,rm6,rm7",
+        "rm10,rm6,rnn3",
+        "rm10,rm7,rnn7",
+        "rm11,rm13,rm7",
+        "rm11,rm13,rnn4",
+        "rm11,rm7,rnn0",
+        "rm13,rm7,rnn7",
+        "rm6,rm7,rnn0"
+      ]
+    },
+    {
+      "id": "right",
+      "name": "right",
+      "members": [
+        "rm15,rm16,rm5",
+        "rm15,rm16,rnn6",
+        "rm15,rm5,rnn2",
+        "rm16,rm5,rnn5",
+        "rm3,rm4,rm5",
+        "rm3,rm4,rnn1",
+        "rm3,rm5,rnn2",
+        "rm4,rm5,rnn5"
+      ]
+    },
+    {
+      "id": "top",
+      "name": "top",
+      "members": [
+        "rm12,rm13,rm14",
+        "rm12,rm13,rnn4",
+        "rm12,rm14,rnn5",
+        "rm13,rm14,rnn7",
+        "rm14,rm16,rm17",
+        "rm14,rm16,rnn5",
+        "rm14,rm17,rnn7",
+        "rm16,rm17,rnn6"
+      ]
+    }
+  ]
+}
