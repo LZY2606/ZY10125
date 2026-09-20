@@ -1,0 +1,372 @@
+{
+  "series": "bracket-broken",
+  "version": 1,
+  "name": "含零体积/悬空引用/冲突约束的网格",
+  "nodes": [
+    {
+      "id": "n0",
+      "coord": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "n1",
+      "coord": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "n2",
+      "coord": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "n3",
+      "coord": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "n4",
+      "coord": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "n5",
+      "coord": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "n6",
+      "coord": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "n7",
+      "coord": [
+        0,
+        1,
+        1
+      ]
+    }
+  ],
+  "cells": [
+    {
+      "id": "c-bad-zero",
+      "type": "tet4",
+      "materialHint": "steel",
+      "nodes": [
+        "n0",
+        "n1",
+        "n2",
+        "n2"
+      ]
+    },
+    {
+      "id": "c2",
+      "type": "tet4",
+      "materialHint": "steel",
+      "nodes": [
+        "n0",
+        "n2",
+        "n3",
+        "n6"
+      ]
+    },
+    {
+      "id": "c3",
+      "type": "tet4",
+      "materialHint": "steel",
+      "nodes": [
+        "n0",
+        "n3",
+        "n7",
+        "n6"
+      ]
+    },
+    {
+      "id": "c4",
+      "type": "tet4",
+      "materialHint": "steel",
+      "nodes": [
+        "n0",
+        "n7",
+        "n4",
+        "n6"
+      ]
+    },
+    {
+      "id": "c5",
+      "type": "tet4",
+      "materialHint": "steel",
+      "nodes": [
+        "n0",
+        "n4",
+        "n5",
+        "n6"
+      ]
+    },
+    {
+      "id": "c6",
+      "type": "tet4",
+      "materialHint": "steel",
+      "nodes": [
+        "n0",
+        "n5",
+        "n1",
+        "n6"
+      ]
+    },
+    {
+      "id": "c-dangling",
+      "type": "tet4",
+      "nodes": [
+        "n0",
+        "n1",
+        "n999",
+        "n3"
+      ]
+    }
+  ],
+  "faces": [
+    {
+      "id": "fb1",
+      "type": "tri3",
+      "nodes": [
+        "n0",
+        "n2",
+        "n1"
+      ]
+    },
+    {
+      "id": "fb2",
+      "type": "tri3",
+      "nodes": [
+        "n1",
+        "n2",
+        "n6"
+      ]
+    },
+    {
+      "id": "fb3",
+      "type": "tri3",
+      "nodes": [
+        "n0",
+        "n3",
+        "n2"
+      ]
+    },
+    {
+      "id": "fb4",
+      "type": "tri3",
+      "nodes": [
+        "n2",
+        "n3",
+        "n6"
+      ]
+    },
+    {
+      "id": "fb5",
+      "type": "tri3",
+      "nodes": [
+        "n0",
+        "n7",
+        "n3"
+      ]
+    },
+    {
+      "id": "fb6",
+      "type": "tri3",
+      "nodes": [
+        "n3",
+        "n7",
+        "n6"
+      ]
+    },
+    {
+      "id": "fb7",
+      "type": "tri3",
+      "nodes": [
+        "n0",
+        "n4",
+        "n7"
+      ]
+    },
+    {
+      "id": "fb8",
+      "type": "tri3",
+      "nodes": [
+        "n7",
+        "n4",
+        "n6"
+      ]
+    },
+    {
+      "id": "fb9",
+      "type": "tri3",
+      "nodes": [
+        "n0",
+        "n5",
+        "n4"
+      ]
+    },
+    {
+      "id": "fb10",
+      "type": "tri3",
+      "nodes": [
+        "n4",
+        "n5",
+        "n6"
+      ]
+    },
+    {
+      "id": "fb11",
+      "type": "tri3",
+      "nodes": [
+        "n0",
+        "n1",
+        "n5"
+      ]
+    },
+    {
+      "id": "fb12",
+      "type": "tri3",
+      "nodes": [
+        "n5",
+        "n1",
+        "n6"
+      ]
+    }
+  ],
+  "regions": [
+    {
+      "id": "reg-steel",
+      "ordinal": 1,
+      "material": "steel-S355",
+      "cells": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6"
+      ]
+    }
+  ],
+  "sets": [
+    {
+      "id": "set-top",
+      "ordinal": 1,
+      "kind": "boundary",
+      "members": [
+        {
+          "kind": "face",
+          "id": "fb8"
+        },
+        {
+          "kind": "face",
+          "id": "fb10"
+        },
+        {
+          "kind": "face",
+          "id": "fb-ghost"
+        }
+      ]
+    },
+    {
+      "id": "set-fixed-corner",
+      "ordinal": 2,
+      "kind": "boundary",
+      "members": [
+        {
+          "kind": "node",
+          "id": "n0"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "bc-fix-n0",
+      "ordinal": 1,
+      "type": "constraint",
+      "targets": [
+        {
+          "kind": "node",
+          "id": "n0"
+        }
+      ],
+      "value": {
+        "dof": [
+          "ux",
+          "uy",
+          "uz"
+        ],
+        "fixed": 0
+      }
+    },
+    {
+      "id": "load-top-pressure",
+      "ordinal": 2,
+      "type": "traction",
+      "targets": [
+        {
+          "kind": "face",
+          "id": "fb8"
+        },
+        {
+          "kind": "face",
+          "id": "fb10"
+        }
+      ],
+      "value": {
+        "pressure": 1000
+      }
+    },
+    {
+      "id": "probe-corner",
+      "ordinal": 3,
+      "type": "probe",
+      "target": {
+        "kind": "node",
+        "id": "n6"
+      },
+      "quantity": "displacement"
+    },
+    {
+      "id": "bc-fix-n0-dup",
+      "ordinal": 4,
+      "type": "constraint",
+      "targets": [
+        {
+          "kind": "node",
+          "id": "n0"
+        }
+      ],
+      "value": {
+        "dof": [
+          "ux"
+        ],
+        "fixed": 1
+      }
+    }
+  ]
+}
